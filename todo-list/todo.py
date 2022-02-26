@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import sys
 
+# Lists the tasks currently in the list
 def listTasks():
     f = open(".todoList.txt", "r")
     Lines = f.readlines()
@@ -8,12 +9,13 @@ def listTasks():
         print("{}- {}".format(count + 1, line.strip()))
     f.close()
 
+# Adds task to the file
 def addToFile(text):
     f = open(".todoList.txt", "a")
     f.write("{}\n".format(text))
     f.close()
     
-
+# Deletes task from the file based on what line of the file it is on
 def delete(deleteLine):
     try:
         with open('.todoList.txt', 'r') as read:
@@ -30,6 +32,7 @@ def delete(deleteLine):
     except:
         print("error")
 
+# Clears the list
 def clear():
     f = open(".todoList.txt", "r+")
     f.truncate(0)
@@ -38,6 +41,8 @@ def clear():
 try:
     if sys.argv[1] == "-a":
         x = str(sys.argv[2])
+        for i in range(3, len(sys.argv)):
+            x = x + " " + str(sys.argv[i])
         addToFile(x)
         listTasks()
     elif sys.argv[1] == "-r":
