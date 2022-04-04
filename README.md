@@ -2,7 +2,7 @@
 
 Terimal-based to-do list that takes command line arguments
 
-- Tasks are stored in ".todoList.txt" in the same directory. If it does not exists, adding a task to the list will create it.
+- Tasks are stored in ".todoList.txt" in the same directory. If it the file does not exists, adding a task will create it.
 
 Commands:
 
