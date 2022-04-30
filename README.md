@@ -2,7 +2,7 @@
 
 Terimal-based to-do list that takes command line arguments
 
-- Tasks added to the list are stored in "~/.config/todo/list". If the directory or file does not exists, They will be creating after first running the progrm 
+- Tasks added to the list are stored in "~/.config/todo/list". If the directory or file does not exists, They will be creating after first running the program 
 
 Commands:
 
